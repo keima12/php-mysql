@@ -4,7 +4,6 @@ services:
   db:
     container_name: test_db
     image: mysql:5.7.39-debian
-    restart: no
     environment:
       MYSQL_ROOT_PASSWORD: test
   web:
@@ -12,11 +11,9 @@ services:
     image: php:5.6-apache-jessie
     ports:
       - 80:80
-    restart: no
   phpmyadmin:
     container_name:  test_phpmyadmin
     image: phpmyadmin:5.2.0-apache
-    restart: no
     ports:
       - 8080:80
     environment:
